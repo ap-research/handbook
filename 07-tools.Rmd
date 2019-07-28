@@ -1,10 +1,23 @@
 # Data Programming {-}
 
+## R
+
   * [R](https://www.r-project.org/)
       
       + To download R, choose a [CRAN mirror](https://cran.r-project.org/mirrors.html) closest to your geographic location.
       + In order to build R packages, you should also download the latest recommended version of [Rtools](https://cran.r-project.org/bin/windows/Rtools/). Currently, the latest recommended version is `Rtoools35.exe`.
-      + During the installation of Rtools, you may need to add in `"C:\Rtools\mingw_64\bin;"` to the path.
+      + During installation, there should be an option to add Rtools to system path. You should check this option.
+      <!-- + During the installation of Rtools, you may need to add in `"C:\Rtools\mingw_64\bin;"` to the path. -->
+      + Afterwards, input the following code into R. If the output is TRUE, then Rtools was installed properly.
+      
+```{r, eval=FALSE}
+install.packages("devtools")
+library(devtools)
+find_rtools()
+
+```
+
+
       
   * [R Studio](https://www.rstudio.com/products/rstudio/download/#download)
   
@@ -13,6 +26,9 @@
 ```{r eval=FALSE}
 install.packages(c("dplyr", "tidyr", "ggplot2", "esquisse", "stats", "xtable"))
 ```
+
+  * [R Search Engine](https://rseek.org/)
+
 ## Cleaning and Reshaping Data
 
 ```{r, results='asis', warning=FALSE, message=FALSE, cache=TRUE}
@@ -80,6 +96,7 @@ pandoc.table(game_long, caption = "(\\#tab:long) Long Data")
 ## Regular Expressions
 
   * [Regular Expressions in R](https://stringr.tidyverse.org/articles/regular-expressions.html)
+  * [UC Business Analytics R Programming Guide: Dealing with Regular Expressions](http://uc-r.github.io/regex)
   
   * [Basic Regular Expressions in R Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf)
 
@@ -155,17 +172,99 @@ pandoc.table(game_long, caption = "(\\#tab:long) Long Data")
   
 ## Github
 
-  * Create new repository
+3 Parts of Version Control
 
-```{r, eval=FALSE}
+1. Working Directory: This is the folder where you store your files (e.g., `C:\Home\hw1`)
+2. Staging Area: Every time you make changes to your files, you need to stage the files. This tells git that these files are ready 
+3. Repository: Every working directory that uses git for version control will have a `.git` folder, which records info about each version of the working directory.
+
+<!-- Terms: -->
+<!--   * HEAD: where we are in the current commit -->
+<!--   * master: -->
+<!--   * origin: -->
+
+Basic git commands:
+
+```
+git --version
+```
+
+  * Check version of git
+  
+```
+git config --global user.name "John Doe"
+git config --global user.email "johndoe@example.com"
+```
+
+  * Configure git to recognize you
+  
+```
+git config --global user.name
+git config --global user.email
+``` 
+
+  * Confirm that user name/e-mail are configured
+  
+```
 git init
-git add README.md
-git commit -m "first commit"
+touch readme.md
+git add readme.md
+git commit -m "added readme file"
+``` 
+
+  * Initialize new repository
+      - If you are at the file path `C:\Home\hw1`, `git init` will initialize the repository in the `hw1` folder
+      - An invisible `.git` folder will be created in the `hw1` folder to track files.
+      - If you are at the file path `C:\Home` and have not created the `hw1` folder, then you can type `git init hw1`, which will create the `hw1` folder and initialize the repo.
+ 
+      - The code above did the following:
+        1. `git init`: initialize repository
+        2. `touch readme.md`: added a blank readme Markdown file
+        3. `git add readme.md`: staged readme.md (this tells git that you are ready to commit this file to the repo)
+        4. `git commit -m "added readme file"`: committed changed to the repo (`-m` allows us to add a message)
+        
+```
+git diff
+```
+
+  * Check differences between in the staging area and working directory.
+  - Output: difference between each file that has changed since you last staged files (`git add`)
+  - If you have staged all files, this command will output nothing, since nothing is different between your working directory and staging area.
+  
+  
+```
+git diff --staged
+```
+    
+  * Check the differences between staging area and repository.
+  
+
+```
+git log
+```
+  * See list of commits.
+  
+
+```
+git reset file1.md
+```
+
+  * Suppose `file1.md` was staged, but I want to remove it from the staging area.
+    - Now, `file1.md` will be untracked.
+  
+
+  
+```
 git remote add origin https://github.com/<username>/<repo-name>.git
 git push -u origin master
-```
-  
-  
+```  
+
+  * Create a new repository in Github. Link your local working directory with the Github repo with these commands. 
+    - `git remote add`: sends commits to the location `origin`
+    - We associated `origin` as a shortcut for the Github repo `https://github.com/<username>/<repo-name>.git`.
+    - `git push -u origin master`
+        + Send `master` branch to remote repo called `origin`
+        + Option `-u` allows us to use `git push` as a shortcut for `git push origin master` in the future
 
 
   * [Best Practices Using Github in RStudio](http://r-pkgs.had.co.nz/git.html)

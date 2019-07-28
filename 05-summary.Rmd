@@ -1,6 +1,6 @@
 # Analysis
 
- * Logical Fallacies
+## Logical Fallacies
  
     Read about the [common fallacies](https://medium.com/@pnhoward/12-common-fallacies-used-in-social-research-9713e4d9bf48) in social research. Summary below:
   
@@ -9,7 +9,7 @@
     - fallacies of emotion
     
   
- * Statistical Biases
+## Biases
  
     - Sampling bias
         + e.g., 1948 U.S. presidential election (see this [case study](https://www.math.upenn.edu/~deturck/m170/wk4/lecture/case2.html))
@@ -19,6 +19,17 @@
     - Selection bias
     - Survivorship bias
         + e.g., when bankrupt companies are removed from a stock index and replaced with profitable companies, the index would experience an upward bias. Business failures would not be accounted for in time series data.
+    - Recall bias
 
- 
- 
+## Model Selection
+
+  * [Model Selection in R](http://r-statistics.co/Model-Selection-in-R.html)
+  * [Linear Model Selection](https://uc-r.github.io/model_selection)
+
+  * Forward/Backward Selection
+  * AIC/BIC
+  * Nested F-tests
+      - model comparisons for linear regressions
+  * Likelihood ratio tests
+      - model comparisons for generalized linear models
+  * Parsimony

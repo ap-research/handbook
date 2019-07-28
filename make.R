@@ -29,3 +29,12 @@ bookdown::preview_chapter(rmd[p],
 
 #after Word document is outputted,
 #use ApplyTableStyle() marco in Word document to apply "Style1" to all tables.
+cf <- file.path(getwd(),"docs")
+cfi <- list.files(path=cf)
+cfifp <- file.path(getwd(),"docs",cfi[grep(list.files(path=cf), pattern='.log$|.aux$|.out$|.synctex.gz$|.tex$|.toc$', invert = T)])
+ap-research/static
+
+#
+file.copy(from = cfifp,
+          to = file.path(dirname(getwd()), "ap-research","static","handbook"),
+          overwrite=TRUE, recursive = TRUE)

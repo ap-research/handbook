@@ -43,4 +43,7 @@ Cite the source of your data. Provide links to the original data source and acco
   * [Guide to Writing a Codebook](http://www.medicine.mcgill.ca/epidemiology/joseph/pbelisle/CodebookCookbook/CodebookCookbook.pdf)
 
   * [How to Use R Codebook Package](https://osf.io/zrsxd/download/)
+  
+    - [Codebook Documentation](https://rubenarslan.github.io/codebook/)
 
+  * [Creating R Package for Research Documentation](https://rpubs.com/YaRrr/rpackageintro)

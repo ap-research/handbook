@@ -24,7 +24,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={AP Research Handbook},
+            pdftitle={AP® Research Handbook},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -116,14 +116,14 @@
 
 \setlength{\droptitle}{-2em}
 
-  \title{AP Research Handbook}
+  \title{AP\textsuperscript{®} Research Handbook}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
     \author{}
     \preauthor{}\postauthor{}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-05-29}
+    \date{2019-07-09}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -169,7 +169,7 @@
   Data privacy standards
 \end{itemize}
 
-This AP Research Handbook is still a work in progress. Please excuse any blank sections and filler text.
+This AP\textsuperscript{®} Research Handbook\footnote{*AP is a registered tradebook of the College Board, which does not endorse and is not involved in the ongoing production of this handbook.} is still a work in progress. Please excuse any blank sections and filler text.
 
 \hypertarget{intro}{%
 \chapter{Research Question}\label{intro}}
@@ -402,6 +402,20 @@ While the bibliography is placed at the end of research papers, reference manage
 \hypertarget{bias-vs.-variance-tradeoff}{%
 \section{Bias vs.~Variance Tradeoff}\label{bias-vs.-variance-tradeoff}}
 
+\begin{itemize}
+\tightlist
+\item
+  \href{https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229}{Understanding the Bias-Variance Tradeoff}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    As you introduce more variables to a model, bias tends to decrease. This means that on average the model will make predictions closer to the true value.
+  \item
+    However, at the same time, variance tends to increase with the added variables. This means that each time you input the model with another random set of data, the outputted predictions will vary a lot. Why? More variables in the model means you might be in danger of overfitting your specific data. This means your model is so specifically tailored to your data at hand that it probably won't generalize well if you applied the model to other randomly drawn datasets.
+  \end{itemize}
+\end{itemize}
+
 \hypertarget{curse-of-dimensionality}{%
 \section{Curse of Dimensionality}\label{curse-of-dimensionality}}
 
@@ -425,11 +439,49 @@ Before you decide how you will conduct your research, read through the \href{htt
 \hypertarget{case-study}{%
 \section{Case Study}\label{case-study}}
 
+\hypertarget{case-control-study}{%
+\section{Case-Control Study}\label{case-control-study}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://sph.unc.edu/files/2015/07/nciph_ERIC5.pdf}{Case-Control Studies}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The diagram on the first page provides a clear overview of case-control study design.
+  \end{itemize}
+\item
+  \href{http://sphweb.bumc.bu.edu/otlt/MPH-Modules/EP/EP713_Case-Control/EP713_Case-Control_print.html}{Overview of Case-Control Design}
+\end{itemize}
+
 \hypertarget{causal}{%
 \section{Causal}\label{causal}}
 
 \hypertarget{cohort}{%
 \section{Cohort}\label{cohort}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Sample a cohort of people from a population of interest
+\item
+  Follow this cohort for many years (often decades)
+\item
+  Record their attributes and exposures.
+\item
+  Record who develops outcome of interest (ongoing process).
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This method can be costly, both monetarily and time-wise.
+\item
+  Compare this method with case-control studies, which are a type of observational study often used in epidemiology.
+\end{itemize}
 
 \hypertarget{cross-sectional}{%
 \section{Cross Sectional}\label{cross-sectional}}
@@ -745,8 +797,379 @@ These notes are based on Professor Masten's \href{https://modu.ssri.duke.edu/top
   \end{enumerate}
 \end{itemize}
 
-\hypertarget{regression-as-causality}{%
-\subsection{Regression as Causality}\label{regression-as-causality}}
+\hypertarget{regression}{%
+\subsection{Regression}\label{regression}}
+
+In general, regression analysis can show only correlations between variables but not causation. The following are some factors that would prevent you from making the leap from correlation to causation in regression analysis:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Confounding Variables
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  A confounding variable is a hidden variable that has an influence on both the dependent variable and independent (or outcome) variable.
+\item
+  This distorts the asssocation between the dependent and independent variable.
+\item
+  Example: Suppose we want to test the effect of the number of books at home (dependent variable) on a child's reading proficiency (independent variable). A confounding factor could be the mother's level of education, which could effect both the number of books at home and the child's reading proficiency. Without accounting for the mother's level of education, we could be overstating the effect of books on reading proficiency.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Reverse Causality
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  In your study of the effect of A on B, you spot an association between the two variables. However, the direction of causality acturally could be reversed (i.e., B has an effect on A).
+\item
+  Example: Suppose you notice that as the debt of a country increases, its economic growth decreases. The cause-and-effect relationship could be the other way around. Maybe a faltering economy is the reason that countries have to accumulate more debt to meet their budgets.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Simultaneity
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Similar to reverse causality, except that that direction of causality goes both ways at the same time. X causes Y, and Y causes X.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Mediating Variable
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Example: Does consuming caffeine stunt children's growth? We might question this causal link if we examine the mediating variable of sleep duration. Perhaps drinking coffee disrupts sleep patterns, which in turn affects growth.
+\end{itemize}
+
+\textbf{Unconfoundedness Assumption}
+
+\begin{itemize}
+\item
+  Under the unconfounded assumption (a.k.a. \textbf{selection on observables assumption}), we have controlled for enough variables that we assume no confounding variables exists. With this assumption, we can consider the association between the treatment and outcome variable to be causal, since conditioning on all the other variables makes the treatment assignment essentially random.
+\item
+  In practice, this assumption is difficult to make, because we cannot truly account for every possible variable relevant to the outcome variable. You would have to assume that all unobserved variables are not related to the treatment and do not contribute any effects to the outcome variable.
+\end{itemize}
+
+\textbf{Ordinary Least Squares (OLS) Regression}
+
+\begin{itemize}
+\tightlist
+\item
+  In OLS regressions, we want to draw a line through a set of points that represents the data.
+\item
+  We calculate the distance between each data point and the line. We then square that distance. Do this for all data points and find the sum of all thes squared distances.
+\item
+  The OLS regression line is the line that minimizes the sum of all these squared distances.
+\item
+  Assumptions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    sample is random
+  \item
+    outcome variable is continuous
+  \end{itemize}
+\end{itemize}
+
+\textbf{Interaction Effects}
+
+\begin{itemize}
+\item
+  If an independent variable \(z\) changes the effect of another independent variable \(x\) on the outcome variable \(y\), we have an \textbf{interaction effect} between \(x\) and \(z\). The original regression model \(y=\beta_0 +\beta_1 x + e\) turns into \(y=\beta_0 +\beta_1 x + \beta_2z + \beta_3~x*z + e\).
+\item
+  This concept is also called \textbf{statistical moderation}, since \(z\) moderates the effect of \(x\) on \(y\).
+\end{itemize}
+
+\textbf{Calculating Average Treatment Effects}
+
+\begin{longtable}[]{@{}ccccccc@{}}
+\caption{\label{tab:atecalc} Potential Outcomes of Treatment by Gender}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\centering
+Person\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
+Gender\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
+Treated\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering
+Outcome
+with Policy\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering
+Outcome
+without Policy\strut
+\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering
+Unit-Level
+Causal Effect\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
+Observed
+Outcome\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\centering
+Person\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
+Gender\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
+Treated\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering
+Outcome
+with Policy\strut
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering
+Outcome
+without Policy\strut
+\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering
+Unit-Level
+Causal Effect\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
+Observed
+Outcome\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.08\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+M\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+60\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+80\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+M\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+75\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+75\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+M\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+85\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+85\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+M\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+60\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+60\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+F\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+75\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+70\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+75\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+F\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+80\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+F\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+90\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+100\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\centering
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+F\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering
+85\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+80\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  In the example table above, we have two potential outcomes for each person: \texttt{Outcome\ with\ Policy} and \texttt{Outcome\ without\ Policy}. In practice, you would never be able to observe both potential outcomes for each person. You either observe \texttt{Outcome\ with\ Policy} if the person received treatment or \texttt{Outcome\ without\ Policy} if the person did not receive treatment. In actual data, you would only obtain \texttt{Observed\ Outcome}.
+\item
+  Unit-Level Causal Effect = Outcome with Policy - Outcome without Policy
+\item
+  Average Treatment Effect (ATE) = average of all the unit-level causal effects
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using the example data above, ATE \(= \frac{20+5+5+10+5+0-10+5}{8}= 5\).
+  \end{itemize}
+\item
+  Conditional Avg. Treatment Effect (CATE) = average treatment effect for a subset of the units
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Example: CATE for men is \(\frac{20+5+5+10}{4} = 10\).
+  \item
+    Example: CATE for women is \(\frac{5+0-10+5}{4} = 0\).
+  \end{itemize}
+\item
+  Average Treatment Effect on the Treated (ATT) = average treatment effect for only the people who received treatment
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In the table above, Persons 1, 2, 3, and 5 received treatment.
+  \item
+    To calculate ATT, we take the average of the unit-level causal effects of these treated people.
+  \item
+    ATT \(= \frac{20+5+5+5}{4} = 8.75\)
+  \end{itemize}
+\item
+  Difference in Mean Outcomes b/w Treated and Untreated (Control) Groups = ATT + Bias
+
+  \begin{itemize}
+  \tightlist
+  \item
+    left-hand side (LHS) = \(\frac{80+75+85+75}{4}-\frac{60+80+100+80}{4} =\) -1.25
+  \item
+    ATT = 8.75
+  \item
+    Bias = difference in the averages in \texttt{Outcome\ without\ Policy} between treated and untreated groups
+
+    \begin{itemize}
+    \tightlist
+    \item
+      If this bias term is nonzero, we can say that the data has \textbf{selection bias}, because the selection into treatment is associated with potential outcomes.
+    \item
+      For \texttt{Treated\ =\ Y}, average \texttt{Outcome\ without\ Policy} = \(\frac{60+70+80+70}{4}\) = 70.
+    \item
+      For \texttt{Treated\ =\ N}, average \texttt{Outcome\ without\ Policy} = \(\frac{60+80+100+80}{4}\) = 80.
+    \item
+      Bias = 70 - 80 = -10.
+    \item
+      In this example, people selected for treatment have a much lower potential outcome without treatment than that of people not selected for treatment.
+    \item
+      This negative selection bias will understate the actual impact of the treatment.
+    \item
+      Similarly, positive selection bias will overstate the actual impact of the treatment.
+    \end{itemize}
+  \item
+    right-hand side (RHS) = ATT + Bias = \(8.75 - 10 = -1.25\)
+  \item
+    Thus, LHS = RHS.
+  \item
+    In randomized experiments, the assignment of treatment is randomized, making the selection bias zero. Thus, the LHS (difference in the mean observed outcomes between the treated/untreated groups) equals ATT. Note that ATT is the average treatment effect (ATE) conditioned on being in the treatment group. Under randomization, we can assume that the potential outcomes are independent of the treatment assignment, so the average treatment effect is the same regardless of conditioning on treatment assignment. Thus, LHS = ATT + zero bias = ATE.
+  \item
+    In this example data, we know that treatment is not randomly assigned, since more men received treatment than women. This means that treatment is correlated with gender. Thus, the calculations done above \emph{do not} represents estimates of the average treatment effect due to the selection bias.
+  \item
+    Instead, we assume that treatment assignment is randomized within each gender group. We calculate the estimated conditional average treatment effects \(\widehat{CATE}(m)\) and \(\widehat{CATE}(f)\) for males and females, respectively, by taking the difference between the average treatment group outcome and the average control (untreated) group outcome \emph{within} each gender.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\widehat{CATE}(m) = \frac{80+75+85}{3}-60 = 20\)
+    \item
+      \(\widehat{CATE}(f) = 75 - \frac{80+100+80}{3} = -11.67\)
+    \end{itemize}
+  \item
+    We add a hat on top of CATE to denote that the calculations are estimates. These estimates \(\widehat{CATE}(m)=20\) and \(\widehat{CATE}(f)=-11.67\) are different from \(CATE(m)=10\) and \(CATE(f)=0\) that we calculated earlier. The CATEs without the hats are the true conditional average effects based on the difference in the two potential outcomes (with/without treatment) for each person. In practice, we will never be able to calculate the true CATEs, because we can never know both potential outcomes for each person. We only have one observed outcome for each person that we use to estimate CATE with \(\widehat{CATE}\).
+  \item
+    To estimate ATE, we take the weighted average of the estimated CATEs. In this case, both gender groups are equally weighted, so \(\widehat{ATE} = \frac{1}{2}\widehat{CATE}(m)+\frac{1}{2}\widehat{CATE}(f) = 20 - 11.67 = 4.16\).
+  \item
+    Note that \(\widehat{ATE} = 4.16\) is positive, whereas earlier calculation of LHS (difference in the mean observed outcomes in the treated/untreated groups) is negative, which understates the average treatment effect due to negative selection bias arising from non-random assignment of treatment between gender.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{matching-methods}{%
+\subsection{Matching Methods}\label{matching-methods}}
+
+In this method, we want to find units with similar explanatory variables but assigned to different treatments. One way to do this is propensity score matching.
 
 \hypertarget{instrumental-variables}{%
 \subsection{Instrumental Variables}\label{instrumental-variables}}
@@ -763,6 +1186,8 @@ These notes are based on Professor Masten's \href{https://modu.ssri.duke.edu/top
   \href{https://stats.idre.ucla.edu/other/mult-pkg/whatstat/}{Chosing the Correct Statistical Test in SAS, Stata, SPSS, and R}
 \item
   \href{http://influentialpoints.com/Training/statistical_mistakes_in_research_use_and_misuse_of_statistics_in_biology.htm}{Uses \& Misuses of Statistics}
+\item
+  \href{http://r-statistics.co/Statistical-Tests-in-R.html}{Statistical Tests in R}
 \item
   1 group
 
@@ -877,9 +1302,9 @@ These notes are based on Professor Masten's \href{https://modu.ssri.duke.edu/top
   \item
     data is a simple random sample from population
   \item
-    data follows normal distribution
+    sample mean follows a normal distribution
   \item
-    by Central Limit Theorm, with sample size \(n>=30\), the sample mean is normally distributed regardless of the population distribution
+    by the Central Limit Theorem, with sample size \(n>=30\), the sample mean is normally distributed regardless of the population distribution
   \end{itemize}
 \item
   Two-tailed Hypothesis:
@@ -951,9 +1376,9 @@ These notes are based on Professor Masten's \href{https://modu.ssri.duke.edu/top
     if you cannot use the assumption of same variance, use the Welch two-sample t-test
 
     \begin{itemize}
+    \tightlist
     \item
       test statistic is the same as below, but degrees of freedom are adjusted
-    \item
     \end{itemize}
   \item
     if populations are not normally distributed, the sample sizes \(n_1\) and \(n_2\) from the two populations needs to be at least 30 to ensure that the distribution of the sample means are normal by the Central Limit Theorem
@@ -1032,6 +1457,77 @@ These notes are based on Professor Masten's \href{https://modu.ssri.duke.edu/top
 \hypertarget{anova}{%
 \subsection{ANOVA}\label{anova}}
 
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.bodowinter.com/tutorial/bw_anova_general.pdf}{F Distribution and Basic Principle Behind ANOVAs}
+\end{itemize}
+
+\hypertarget{regression-1}{%
+\section{Regression}\label{regression-1}}
+
+\hypertarget{simple-linear-regression}{%
+\subsection{Simple Linear Regression}\label{simple-linear-regression}}
+
+A simple linear regression has the form \(y=\beta_0 + \beta_1 x + e\), where
+
+\begin{itemize}
+\tightlist
+\item
+  \(y\) is the dependent (or outcome) variable
+\item
+  \(x\) is the indepndent (or explanatory) variable
+\item
+  \(\beta_0\), the regression intercept, represents the average value of the outcome variable \(y\) when \(x=0\)
+\item
+  \(\beta_1\) is the regression coefficient of \(x\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    for each 1-unit increase in \(x\), \(y\) changes by \(\beta_1\)
+  \item
+    \(\beta_1\) is the slope of this regression line
+  \end{itemize}
+\item
+  \(e\) is the error term. Some textbooks will use the variable \(u\) instead of \(e\) to emphasize that this term includes all unobserved variables.
+\end{itemize}
+
+\hypertarget{multiple-linear-regression}{%
+\subsection{Multiple Linear Regression}\label{multiple-linear-regression}}
+
+Linear regressions with multiple explanatory variables are called \textbf{multiple linear regressions}. If we have \(n\) explanatory variables, the multiple linear regression will have the form \(y=\beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n + e\), where
+
+\begin{itemize}
+\tightlist
+\item
+  \(\beta_0\), the regression intercept, represents the average value of the outcome variable \(y\) when all the explanatory variables \(x_1, x_2,...,x_n\) are zero.
+\item
+  \(\beta_1\) represents how much \(y\) changes when \(x_1\) increases by 1 unit, holding all other explanatory variables constant. The Latin phrase \emph{ceteris paribus}, meaning ``other things equal,'' is often used to describe this concept. This does not mean the other explanatory variables do not change. Rather, we are isolating the effect of \(x_1\) on \(y\) under the theoretical condition that the other explanatory variables are held constant.
+\item
+  This interpretation of \(\beta_1\) extends to all the other regresssion coeffients.
+\end{itemize}
+
+\hypertarget{logistic-regression}{%
+\subsection{Logistic Regression}\label{logistic-regression}}
+
+\begin{itemize}
+\tightlist
+\item
+  outcome variable is binary (e.g., 0 or 1; yes or no)
+\end{itemize}
+
+\hypertarget{mixed-effects-models}{%
+\subsection{Mixed Effects Models}\label{mixed-effects-models}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://www.bodowinter.com/tutorial/bw_anova_general.pdf}{Linear Models and Linear Mixed Effects Models in R: Tutorial 1}
+\item
+  \href{http://www.bodowinter.com/tutorial/bw_LME_tutorial2.pdf}{A Very Basic Tutorial for Performing Linear Mixed Effects Analyses: Tutorial 2}
+\end{itemize}
+
 \hypertarget{numerical-methods}{%
 \section{Numerical Methods}\label{numerical-methods}}
 
@@ -1070,9 +1566,48 @@ In AP Calculus, you mostly encountered problems that can be solved analytically.
 \begin{itemize}
 \tightlist
 \item
+  \href{https://kingaa.github.io/thid/odes/ODEs_in_R.pdf}{Integrating ODEs in R}
+\item
   \href{http://www.ohiouniversityfaculty.com/youngt/IntNumMeth/lecture30.pdf}{Euler Method Using Matlab}
 \item
+  \href{http://faculty.washington.edu/heathml/2018spring307/euler_method.pdf}{Euler Method with Python}
+\item
   Runge-Kutta Methods
+\end{itemize}
+
+\hypertarget{text-analysis}{%
+\section{Text Analysis}\label{text-analysis}}
+
+\begin{itemize}
+\item
+  \href{https://www.tidytextmining.com/ngrams.html}{Text Mining with R}
+\item
+  Mosteller and Wallace (1963) and the Federalist Papers
+
+  \begin{itemize}
+  \item
+    \href{https://priceonomics.com/how-statistics-solved-a-175-year-old-mystery-about/}{How Statistics Solved a 175-Year-Old Mystery About Alexander Hamilton}
+  \item
+    \href{http://ptrckprry.com/course/ssd/lecture/federalist.html}{Replication of Analysis in Mosteller and Wallace (1963)}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{network-analysis}{%
+\section{Network Analysis}\label{network-analysis}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.jessesadler.com/post/network-analysis-with-r/}{Introduction to Network Analysis with R}
+\end{itemize}
+
+\hypertarget{geospatial-analysis}{%
+\section{Geospatial Analysis}\label{geospatial-analysis}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://geocompr.robinlovelace.net/}{Geocomputation with R}
 \end{itemize}
 
 \hypertarget{resources-by-discipline}{%
@@ -1250,61 +1785,83 @@ Cite the source of your data. Provide links to the original data source and acco
   \href{http://www.medicine.mcgill.ca/epidemiology/joseph/pbelisle/CodebookCookbook/CodebookCookbook.pdf}{Guide to Writing a Codebook}
 \item
   \href{https://osf.io/zrsxd/download/}{How to Use R Codebook Package}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://rubenarslan.github.io/codebook/}{Codebook Documentation}
+  \end{itemize}
+\item
+  \href{https://rpubs.com/YaRrr/rpackageintro}{Creating R Package for Research Documentation}
 \end{itemize}
 
 \hypertarget{analysis}{%
 \chapter{Analysis}\label{analysis}}
 
+\hypertarget{logical-fallacies}{%
+\section{Logical Fallacies}\label{logical-fallacies}}
+
+\begin{verbatim}
+Read about the [common fallacies](https://medium.com/@pnhoward/12-common-fallacies-used-in-social-research-9713e4d9bf48) in social research. Summary below:
+
+- fallacies of authority
+- fallacies of logic
+- fallacies of emotion
+\end{verbatim}
+
+\hypertarget{biases}{%
+\section{Biases}\label{biases}}
+
+\begin{verbatim}
+- Sampling bias
+    + e.g., 1948 U.S. presidential election (see this [case study](https://www.math.upenn.edu/~deturck/m170/wk4/lecture/case2.html))
+    + even very large samples could have sampling biases if sampling methods are poor and unrepresentative of the population (e.g., [1936 Literary Digest Poll](https://www.math.upenn.edu/~deturck/m170/wk4/lecture/case1.html))
+- Omitted variable bias
+- Nonresponse bias
+- Selection bias
+- Survivorship bias
+    + e.g., when bankrupt companies are removed from a stock index and replaced with profitable companies, the index would experience an upward bias. Business failures would not be accounted for in time series data.
+- Recall bias
+\end{verbatim}
+
+\hypertarget{model-selection}{%
+\section{Model Selection}\label{model-selection}}
+
 \begin{itemize}
 \item
-  Logical Fallacies
-
-  Read about the \href{https://medium.com/@pnhoward/12-common-fallacies-used-in-social-research-9713e4d9bf48}{common fallacies} in social research. Summary below:
+  \href{http://r-statistics.co/Model-Selection-in-R.html}{Model Selection in R}
+\item
+  \href{https://uc-r.github.io/model_selection}{Linear Model Selection}
+\item
+  Forward/Backward Selection
+\item
+  AIC/BIC
+\item
+  Nested F-tests
 
   \begin{itemize}
   \tightlist
   \item
-    fallacies of authority
-  \item
-    fallacies of logic
-  \item
-    fallacies of emotion
+    model comparisons for linear regressions
   \end{itemize}
 \item
-  Statistical Biases
+  Likelihood ratio tests
 
   \begin{itemize}
   \tightlist
   \item
-    Sampling bias
-
-    \begin{itemize}
-    \tightlist
-    \item
-      e.g., 1948 U.S. presidential election (see this \href{https://www.math.upenn.edu/~deturck/m170/wk4/lecture/case2.html}{case study})
-    \item
-      even very large samples could have sampling biases if sampling methods are poor and unrepresentative of the population (e.g., \href{https://www.math.upenn.edu/~deturck/m170/wk4/lecture/case1.html}{1936 Literary Digest Poll})
-    \end{itemize}
-  \item
-    Omitted variable bias
-  \item
-    Nonresponse bias
-  \item
-    Selection bias
-  \item
-    Survivorship bias
-
-    \begin{itemize}
-    \tightlist
-    \item
-      e.g., when bankrupt companies are removed from a stock index and replaced with profitable companies, the index would experience an upward bias. Business failures would not be accounted for in time series data.
-    \end{itemize}
+    model comparisons for generalized linear models
   \end{itemize}
+\item
+  Parsimony
 \end{itemize}
 
 \hypertarget{data-programming}{%
 \chapter*{Data Programming}\label{data-programming}}
 \addcontentsline{toc}{chapter}{Data Programming}
+
+\hypertarget{r}{%
+\section{R}\label{r}}
 
 \begin{itemize}
 \item
@@ -1334,6 +1891,12 @@ Cite the source of your data. Provide links to the original data source and acco
 \KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\StringTok{"tidyr"}\NormalTok{, }\StringTok{"ggplot2"}\NormalTok{, }\StringTok{"esquisse"}\NormalTok{, }\StringTok{"stats"}\NormalTok{, }\StringTok{"xtable"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://rseek.org/}{R Search Engine}
+\end{itemize}
 
 \hypertarget{cleaning-and-reshaping-data}{%
 \section{Cleaning and Reshaping Data}\label{cleaning-and-reshaping-data}}
@@ -1421,81 +1984,81 @@ X\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 1\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.5\strut
+-0.2\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--1.5\strut
+-0.2\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 X\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 2\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0\strut
+1.3\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--1\strut
+1\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 X\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 3\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.6\strut
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+-0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+-2.2\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 0.1\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--0.5\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 2\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.4\strut
+1.2\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.7\strut
+-0.2\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 3\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.4\strut
+0.8\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-1.5\strut
+1.1\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Z\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 1\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+0.3\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+-1.9\strut
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 -1.4\strut
 \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0.2\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--0.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
--1.2\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
-0\strut
+-0.1\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1513,7 +2076,7 @@ Z\strut
 id\strut
 \end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_1\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_2\strut
 \end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_3\strut
@@ -1531,7 +2094,7 @@ B\_3\strut
 id\strut
 \end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_1\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_2\strut
 \end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
 A\_3\strut
@@ -1547,47 +2110,47 @@ B\_3\strut
 \begin{minipage}[t]{0.06\columnwidth}\centering
 X\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.5\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-0\strut
+-0.2\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.6\strut
+1.3\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--1.5\strut
+1\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--1\strut
+-0.2\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.1\strut
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+-0.4\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--0.5\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-0.4\strut
+-2.2\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.4\strut
+1.2\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.2\strut
+0.8\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-0.7\strut
+0.1\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-1.5\strut
+-0.2\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+1.1\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Z\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+0.3\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+-1.9\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
 -1.4\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-0.2\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--1.2\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--1\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
--0.5\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
 0\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+0\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
+-0.1\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1631,160 +2194,160 @@ X\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
 A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.8\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1.1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.9\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2.6\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.8\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 0.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.6\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--1.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--1.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--1.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.7\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.5\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1801,6 +2364,8 @@ B\strut
 \begin{itemize}
 \item
   \href{https://stringr.tidyverse.org/articles/regular-expressions.html}{Regular Expressions in R}
+\item
+  \href{http://uc-r.github.io/regex}{UC Business Analytics R Programming Guide: Dealing with Regular Expressions}
 \item
   \href{https://www.rstudio.com/wp-content/uploads/2016/09/RegExCheatsheet.pdf}{Basic Regular Expressions in R Cheat Sheet}
 \end{itemize}
@@ -1940,23 +2505,166 @@ Beamer is a LaTeX class for presentations.
 \hypertarget{github}{%
 \section{Github}\label{github}}
 
+3 Parts of Version Control
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Working Directory: This is the folder where you store your files (e.g., \texttt{C:\textbackslash{}Home\textbackslash{}hw1})
+\item
+  Staging Area: Every time you make changes to your files, you need to stage the files. This tells git that these files are ready
+\item
+  Repository: Every working directory that uses git for version control will have a \texttt{.git} folder, which records info about each version of the working directory.
+\end{enumerate}
+
+Basic git commands:
+
+\begin{verbatim}
+git --version
+\end{verbatim}
+
 \begin{itemize}
 \tightlist
 \item
-  Create new repository
+  Check version of git
 \end{itemize}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{git init}
-\NormalTok{git add README.md}
-\NormalTok{git commit }\OperatorTok{-}\NormalTok{m }\StringTok{"first commit"}
-\NormalTok{git remote add origin https}\OperatorTok{:}\ErrorTok{//}\NormalTok{github.com}\OperatorTok{/}\ErrorTok{<}\NormalTok{username}\OperatorTok{>}\ErrorTok{/<}\NormalTok{repo}\OperatorTok{-}\NormalTok{name}\OperatorTok{>}\NormalTok{.git}
-\NormalTok{git push }\OperatorTok{-}\NormalTok{u origin master}
-\end{Highlighting}
-\end{Shaded}
+\begin{verbatim}
+git config --global user.name "John Doe"
+git config --global user.email "johndoe@example.com"
+\end{verbatim}
 
 \begin{itemize}
+\tightlist
+\item
+  Configure git to recognize you
+\end{itemize}
+
+\begin{verbatim}
+git config --global user.name
+git config --global user.email
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Confirm that user name/e-mail are configured
+\end{itemize}
+
+\begin{verbatim}
+git init
+touch readme.md
+git add readme.md
+git commit -m "added readme file"
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Initialize new repository
+
+  \begin{itemize}
+  \item
+    If you are at the file path \texttt{C:\textbackslash{}Home\textbackslash{}hw1}, \texttt{git\ init} will initialize the repository in the \texttt{hw1} folder
+  \item
+    An invisible \texttt{.git} folder will be created in the \texttt{hw1} folder to track files.
+  \item
+    If you are at the file path \texttt{C:\textbackslash{}Home} and have not created the \texttt{hw1} folder, then you can type \texttt{git\ init\ hw1}, which will create the \texttt{hw1} folder and initialize the repo.
+  \item
+    The code above did the following:
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \tightlist
+    \item
+      \texttt{git\ init}: initialize repository
+    \item
+      \texttt{touch\ readme.md}: added a blank readme Markdown file
+    \item
+      \texttt{git\ add\ readme.md}: staged readme.md (this tells git that you are ready to commit this file to the repo)
+    \item
+      \texttt{git\ commit\ -m\ "added\ readme\ file"}: committed changed to the repo (\texttt{-m} allows us to add a message)
+    \end{enumerate}
+  \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+git diff
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Check differences between in the staging area and working directory.
+\item
+  Output: difference between each file that has changed since you last staged files (\texttt{git\ add})
+\item
+  If you have staged all files, this command will output nothing, since nothing is different between your working directory and staging area.
+\end{itemize}
+
+\begin{verbatim}
+git diff --staged
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Check the differences between staging area and repository.
+\end{itemize}
+
+\begin{verbatim}
+git log
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  See list of commits.
+\end{itemize}
+
+\begin{verbatim}
+git reset file1.md
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose \texttt{file1.md} was staged, but I want to remove it from the staging area.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Now, \texttt{file1.md} will be untracked.
+  \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+git remote add origin https://github.com/<username>/<repo-name>.git
+git push -u origin master
+\end{verbatim}
+
+\begin{itemize}
+\item
+  Create a new repository in Github. Link your local working directory with the Github repo with these commands.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{git\ remote\ add}: sends commits to the location \texttt{origin}
+  \item
+    We associated \texttt{origin} as a shortcut for the Github repo \texttt{https://github.com/\textless{}username\textgreater{}/\textless{}repo-name\textgreater{}.git}.
+  \item
+    \texttt{git\ push\ -u\ origin\ master}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Send \texttt{master} branch to remote repo called \texttt{origin}
+    \item
+      Option \texttt{-u} allows us to use \texttt{git\ push} as a shortcut for \texttt{git\ push\ origin\ master} in the future
+    \end{itemize}
+  \end{itemize}
 \item
   \href{http://r-pkgs.had.co.nz/git.html}{Best Practices Using Github in RStudio}
 \item

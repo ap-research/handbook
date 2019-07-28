@@ -123,7 +123,7 @@
     \preauthor{}\postauthor{}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-07-09}
+    \date{2019-07-27}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1874,8 +1874,21 @@ Read about the [common fallacies](https://medium.com/@pnhoward/12-common-fallaci
   \item
     In order to build R packages, you should also download the latest recommended version of \href{https://cran.r-project.org/bin/windows/Rtools/}{Rtools}. Currently, the latest recommended version is \texttt{Rtoools35.exe}.
   \item
-    During the installation of Rtools, you may need to add in \texttt{"C:\textbackslash{}Rtools\textbackslash{}mingw\_64\textbackslash{}bin;"} to the path.
+    During installation, there should be an option to add Rtools to system path. You should check this option.
+  \item
+    Afterwards, input the following code into R. If the output is TRUE, then Rtools was installed properly.
   \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(devtools)}
+\KeywordTok{find_rtools}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
 \item
   \href{https://www.rstudio.com/products/rstudio/download/\#download}{R Studio}
 
@@ -2194,131 +2207,50 @@ X\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
 A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.8\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 -0.2\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
-Y\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.3\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.1\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.9\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-Z\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-A\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
-X\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.3\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\centering
 X\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 2\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-1\strut
+1.3\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 X\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 3\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
--0.3\strut
+1\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 1\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.4\strut
+-2.2\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 2\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-2.6\strut
+1.2\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Y\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 3\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 0.8\strut
 \end{minipage}\tabularnewline
@@ -2327,7 +2259,7 @@ Z\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 1\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
-B\strut
+A\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 0.3\strut
 \end{minipage}\tabularnewline
@@ -2336,9 +2268,90 @@ Z\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 2\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-1.9\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+A\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-1.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+X\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
 B\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 -0.4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0.1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+-0.2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Y\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1.1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\centering
+Z\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
+B\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
+0\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.06\columnwidth}\centering
 Z\strut
@@ -2347,7 +2360,7 @@ Z\strut
 \end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering
 B\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-0.5\strut
+-0.1\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}

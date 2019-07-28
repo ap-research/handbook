@@ -3,12 +3,17 @@ title: "AP^&reg;^ Research Handbook"
 author: ""
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output: 
+  bookdown::gitbook:
+    config:
+      sharing: null
+        # facebook: false
+        # twitter: false
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: apscholar/ap-research-handbook
+github-repo: ap-research/handbook
 description: "This notebook is a compilation of resources, research methods, and case study materials for AP Research."
 always_allow_html: yes
 ---
